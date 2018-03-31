@@ -1,6 +1,6 @@
 # JSX-OAS Commander
 
-## NB: This is a work-in-progress and not production-ready.
+## NB: This is a work-in-progress and not production-ready. 
 
 ## Description
 
@@ -10,10 +10,22 @@ JavaScript Extension in Adobe Illustrator can call `File().execute()` but if you
 
 The idea is to create an applet that will take any commands and parameters, execute them on the shell, including bash and NodeJS, and return the results in JSON format via a known output file.
 
+## System Requirements
+
+Sorry, but this script works on MacOS only.
+
 ## Installation 
 
-@TODO:
+Download this repository to your Mac computer.
 
 ## Usage 
 
-@TODO:
+The basic workflow of this script is:
+
+1. From your JSX script, write the shell script you want to execute to `path/to/jsx-oas-commander/input/command.sh`
+2. From your JSX script, call `new File("path/to/jsx-oas-commander/Commander.app").execute()`
+3. **Commander.app** will read the `input/command.sh` text file and execute the enclose text as a shell script.
+4. The result of the shell script will be written to `jsx-oas-commander/output/output.json`.
+5. From your JSX script, read the results in `jsx-oas-commander/output/output.json`. The result will be in `{result:"the restult text"}`.
+
+@TODO: Add error message from shell or AppleScript to result
