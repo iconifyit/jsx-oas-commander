@@ -28,4 +28,22 @@ The basic workflow of this script is:
 4. The result of the shell script will be written to `jsx-oas-commander/output/output.json`.
 5. From your JSX script, read the results in `jsx-oas-commander/output/output.json`. The result will be in `{result:"the restult text"}`.
 
-@TODO: Add error message from shell or AppleScript to result
+
+
+```json
+{
+    "result": "scott"
+}
+```
+
+## Error Handling
+
+If the script encounters an error, the JSON result will contain a null value for the `result` JSON property, and the addition of `errnum` and `errmsg` values. The `errnum` value is enclosed in quotes in case, for some reason, an empty value is returned. We do not enclose the `null` values for `result` in quotes since it is being hard-coded as a string literal so we are certain it is syntactically correct.
+
+```json
+{
+    "result": null, 
+    "errnum": "-128", 
+    "errmsg": "Something went terribly wrong."
+}
+```
