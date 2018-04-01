@@ -1,1 +1,2 @@
-whoami
+cp -R /Users/scott/github/iconify/jsx-oas-commander/test-data/social-icons.iconjar /Users/scott/github/iconify/jsx-oas-commander/output/social-extracted
+cp /Users/scott/github/iconify/jsx-oas-commander/output/social-extracted/META /Users/scott/github/iconify/jsx-oas-commander/output/social-extracted/META.json
